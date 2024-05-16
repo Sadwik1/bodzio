@@ -1,31 +1,235 @@
 .container{
-height: 100%;
-width: 100%;
+text-align: center;
+background-image: url(index.png);
+background-size: 100%;
+background-repeat: no-repeat;
+display: grid; 
+grid-template-columns: 0.6fr 1.5fr 0.6fr; 
+grid-template-rows: 1fr 4.4fr 0.6fr; 
+grid-template-areas: 
+  "head head head"
+  "main main main"
+  "foot foot foot"; 
+  list-style-type: none;
+}
+body{
+    margin:0px;
+    color: azure;
 }
 main{
-    display: flex;
+    display: grid;
+    grid-template-columns: 0.6fr 3fr 0.6fr; 
+    grid-template-rows: 1fr 1fr; 
+    grid-template-areas: 
+    "asid1 sec asid2"
+    "asid1 sec asid2"; 
+    grid-area: main;
 }
-#sit1{
+header{
+    grid-area: head;
     display: flex;
-    height: 6em;
-    width: 8em
+    justify-content: center;
+    flex-direction: row;
 }
-#sit2{
+.nav{
     display: flex;
-    height: 6em;
-    width: 8em
+    align-items: center;
+    justify-content: center;
+    margin: 1vw;
+    width: 8vw;
+    height: 4vw;
+    color: azure;
+    border-radius: 50%;
+    background-color: rgba(222, 184, 135, 0.685);
 }
-#sit3{
-    display: flex;
-    height: 6em;
-    width: 8em
+.nav:hover{
+    transform: scale(1.1);
 }
-#sit4{
+footer{
+    grid-area: foot;
+    height: 100%;
+}
+#asid1{
+    grid-area: asid1;
+}
+#asid2{
+    grid-area: asid2;
+}
+section{
+    grid-area: sec;
     display: flex;
-    height: 6em;
-    width: 8em
+    justify-content: center;
+    flex-direction: column;
+}
+aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 37vw;
+}
+article{
+    display: flex;
+    flex-direction: column;
+    height: 16vw;
+    width: 18vw;
 }
 img{
+    display: flex;
     height: 100%;
     width: 100%;
+    border-radius: 50%;
+    filter: blur(1px);
+}
+li{
+    text-decoration:none;
+}
+h4{
+    font-size:2vw;
+    filter: blur(1px);
+}
+a{
+    filter: blur(1px);
+    font-size:2vw;
+    flex-basis: 100%;
+    text-decoration:none;
+    color: azure;
+}
+ol {
+    list-style-type:none;
+    padding:0;
+    margin:0;
+    font-size:2vw;
+    height:2vw;
+    line-height:2vw;
+    text-align:center;
+    background-color:#74551cb4;
+  }
+  ol > li {
+    float:left;
+    background-color:#74551cb4;
+    width:20vw;
+    height: 7vw;
+
+  }
+  
+ol a {
+    display:block;
+    color:#000;
+    text-decoration:none;
+    padding:0 5px;
+  }
+  
+  
+  ol > li:hover {
+    background-color:#74551cb4;
+  }
+  ol > li > ul {
+    list-style-type:none;
+    padding:0;
+    margin:0;
+  }
+  ol > li:first-child {
+    margin-left:0;
+  }
+  
+ol {
+    background-color:#74551cb4;
+  }
+  
+  ol > li > ul > li {
+    background-color:#74551cb4;
+  }
+  ol > li > ul > li:hover {
+    background-color:#74551cb4;
+  }
+  
+  ol > li > ul > li:hover a {
+    color:azure;
+  }
+  ol > li > ul {
+    display:none;
+  }
+  
+  ol > li:hover > ul {
+    
+    display:block;
+  }
+  ol > li:hover{
+    color: azure;
+  }
+
+
+  @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+  *, *::before, *::after {
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Roboto Slab", serif;
+  }
+  
+  .morphing {
+    position: relative;
+    font-size: 4vw;
+    background-color: #000;
+    color: #fff;
+    min-height: 30vw;
+    filter: contrast(25) blur(1px);
+  }
+  
+  .word {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: word 16s infinite ease-in-out;
+  }
+  .word:nth-child(1) {
+    animation-delay: -16s;
+  }
+  .word:nth-child(2) {
+    animation-delay: -14s;
+  }
+  .word:nth-child(3) {
+    animation-delay: -12s;
+  }
+  .word:nth-child(4) {
+    animation-delay: -10s;
+  }
+  .word:nth-child(5) {
+    animation-delay: -8s;
+  }
+  .word:nth-child(6) {
+    animation-delay: -6s;
+  }
+  .word:nth-child(7) {
+    animation-delay: -4s;
+  }
+  @keyframes word {
+    0%, 5%, 100% {
+      filter: blur(0px);
+      opacity: 1;
+    }
+    20%, 80% {
+      filter: blur(1em);
+      opacity: 0;
+    }
+  }
+#sit1:hover{
+    transform: scale(1.1);
+}
+#sit2:hover{
+    transform: scale(1.1);
+}
+#sit3:hover{
+    transform: scale(1.1);
+}
+#sit4:hover{
+    transform: scale(1.1);
+}
+h1{
+    filter: blur(1px);
+    font-size: 3vw;
 }
