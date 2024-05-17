@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
 .container{
 text-align: center;
 background-image: url(index.png);
-background-size: 100%;
+background-size: cover;
 background-repeat: no-repeat;
+background-position: center;
 display: grid; 
 grid-template-columns: 0.6fr 1.5fr 0.6fr; 
 grid-template-rows: 1fr 4.4fr 0.6fr; 
@@ -11,10 +13,12 @@ grid-template-areas:
   "main main main"
   "foot foot foot"; 
   list-style-type: none;
+  min-height: 100vh;
 }
 body{
     margin:0px;
     color: azure;
+    height: 100%;
 }
 main{
     display: grid;
@@ -31,6 +35,11 @@ header{
     justify-content: center;
     flex-direction: row;
 }
+menu{
+  display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
 .nav{
     display: flex;
     align-items: center;
@@ -40,7 +49,7 @@ header{
     height: 4vw;
     color: azure;
     border-radius: 50%;
-    background-color: rgba(222, 184, 135, 0.685);
+    background-color: rgba(186, 156, 117, 0.727);
 }
 .nav:hover{
     transform: scale(1.1);
@@ -58,14 +67,15 @@ footer{
 section{
     grid-area: sec;
     display: flex;
-    justify-content: center;
+    justify-content:space-around;
     flex-direction: column;
+    
 }
 aside{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 37vw;
+    height: 100%;
 }
 article{
     display: flex;
@@ -118,7 +128,7 @@ ol a {
     text-decoration:none;
     padding:0 5px;
   }
-  
+
   
   ol > li:hover {
     background-color:#74551cb4;
@@ -159,7 +169,7 @@ ol {
   }
 
 
-  @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+
   *, *::before, *::after {
     padding: 0;
     margin: 0 auto;
@@ -175,13 +185,13 @@ ol {
     font-size: 4vw;
     background-color: #000;
     color: #fff;
-    min-height: 30vw;
+    min-height: 20vw;
     filter: contrast(25) blur(1px);
   }
   
   .word {
     position: absolute;
-    top: 30%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     animation: word 16s infinite ease-in-out;
@@ -232,4 +242,38 @@ ol {
 h1{
     filter: blur(1px);
     font-size: 3vw;
+}
+footer{
+  text-align: center;
+  display: flex;
+  align-content: end;
+}
+@media screen and (max-width:576px){
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.container{
+  background-color: rgb(66, 65, 65);
+  background-image: none;
+  grid-template-rows: 0.6fr 6fr 0.6fr;
+}
+h1{
+  font-size: 4vw;
+  filter: blur(0px);
+}
+h4{
+  filter: blur(0px);
+}
+img{
+  filter: blur(0px);
+}
+article{
+  height: 25vw;
+  width: 28vw;
+}
+aside{
+  height: 50vw;
+}
 }
