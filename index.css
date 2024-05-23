@@ -7,7 +7,7 @@ background-repeat: no-repeat;
 background-position: center;
 display: grid; 
 grid-template-columns: 0.6fr 1.5fr 0.6fr; 
-grid-template-rows: 1fr 4.4fr 0.6fr; 
+grid-template-rows: 0.6fr 4.8fr 0.6fr; 
 grid-template-areas: 
   "head head head"
   "main main main"
@@ -20,6 +20,30 @@ body{
     color: azure;
     height: 100%;
 }
+header{
+  grid-area: head;
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  flex-direction: row;
+}
+menu{
+display: flex;
+  flex-direction: row;
+  margin: 0;
+  justify-content: flex-end;
+}
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12vw;
+  height: 3vw;
+  color: azure;
+}
+.nav:hover{
+  transform: scale(1.1);
+}
 main{
     display: grid;
     grid-template-columns: 0.6fr 3fr 0.6fr; 
@@ -29,31 +53,7 @@ main{
     "asid1 sec asid2"; 
     grid-area: main;
 }
-header{
-    grid-area: head;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-}
-menu{
-  display: flex;
-    justify-content: center;
-    flex-direction: row;
-}
-.nav{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 1vw;
-    width: 8vw;
-    height: 4vw;
-    color: azure;
-    border-radius: 50%;
-    background-color: rgba(186, 156, 117, 0.727);
-}
-.nav:hover{
-    transform: scale(1.1);
-}
+
 footer{
     grid-area: foot;
     height: 100%;
@@ -83,6 +83,13 @@ article{
     height: 16vw;
     width: 18vw;
 }
+#logo{
+  height: 6vw;
+  width: 10vw;
+  border-radius: 0%;
+  margin: 0;
+  justify-content: flex-end;
+}
 img{
     display: flex;
     height: 100%;
@@ -99,8 +106,9 @@ h4{
 }
 a{
     filter: blur(1px);
-    font-size:2vw;
-    flex-basis: 100%;
+    font-size:3vw;
+    width: 100%;
+    height: 100%;
     text-decoration:none;
     color: azure;
 }
@@ -250,30 +258,66 @@ footer{
 }
 @media screen and (max-width:576px){
 main{
-  display: flex;
+  grid-template-columns: 1fr 2.2fr 1fr;
+  grid-template-rows: 0.8fr 1fr 1fr; 
+  grid-template-areas: 
+    "sec sec sec"
+    "asid1 null asid2"
+    "asid1 null asid2";
+  /* display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-around; */
 }
 .container{
-  background-color: rgb(66, 65, 65);
-  background-image: none;
+  grid-template-rows: 0.5fr 5fr 0.3fr; 
+  /* background-color: rgb(66, 65, 65);
+  background-image: none; */
   grid-template-rows: 0.6fr 6fr 0.6fr;
 }
 h1{
-  font-size: 4vw;
+  font-size: 7vw;
   filter: blur(0px);
 }
 h4{
   filter: blur(0px);
+  font-size: 3vw;
 }
 img{
   filter: blur(0px);
 }
 article{
-  height: 25vw;
-  width: 28vw;
+  height: 35vw;
+  width: 35vw;
 }
 aside{
-  height: 50vw;
+  /* height: 50vw; */
+}
+.word {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: word 16s infinite ease-in-out;
+}
+.morphing {
+  position: relative;
+  font-size: 8vw;
+  background-color: #000;
+  color: #fff;
+  min-height: 15vw;
+  filter: contrast(25) blur(1px);
+}
+.nav{
+  margin: 3vw;
+  width: 24vw;
+  height: 16vw;
+}
+a{
+  filter: blur(0px);
+  font-size: 6vw;
+
+}
+h3{
+  font-size: 4vw;
 }
 }
