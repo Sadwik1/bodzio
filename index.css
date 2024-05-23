@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+
 .container{
 text-align: center;
 background-image: url(index.png);
@@ -7,7 +7,7 @@ background-repeat: no-repeat;
 background-position: center;
 display: grid; 
 grid-template-columns: 0.6fr 1.5fr 0.6fr; 
-grid-template-rows: 0.6fr 4.8fr 0.6fr; 
+grid-template-rows: 0.4fr 5fr 0.6fr; 
 grid-template-areas: 
   "head head head"
   "main main main"
@@ -26,6 +26,8 @@ header{
   display: flex;
   justify-content: left;
   flex-direction: row;
+  background-color: #0000002c;
+  box-shadow: 8px 8px 24px 0px rgb(92, 92, 92);
 }
 menu{
 display: flex;
@@ -40,9 +42,15 @@ display: flex;
   width: 12vw;
   height: 3vw;
   color: azure;
+  margin-top: 1vw;
 }
-.nav:hover{
-  transform: scale(1.1);
+#logo{
+  height: 6vw;
+  width: 16%;
+  border-radius: 0%;
+  margin: 0;
+  justify-content: flex-end;
+  filter: blur(0px);
 }
 main{
     display: grid;
@@ -53,10 +61,18 @@ main{
     "asid1 sec asid2"; 
     grid-area: main;
 }
-
+h1{
+  filter: blur(1px);
+  font-size: 3vw;
+}
 footer{
     grid-area: foot;
     height: 100%;
+    filter: blur(0.7px);
+}
+h4{
+  filter: blur(1px);
+  font-size: 2vw;
 }
 #asid1{
     grid-area: asid1;
@@ -83,13 +99,7 @@ article{
     height: 16vw;
     width: 18vw;
 }
-#logo{
-  height: 6vw;
-  width: 10vw;
-  border-radius: 0%;
-  margin: 0;
-  justify-content: flex-end;
-}
+
 img{
     display: flex;
     height: 100%;
@@ -97,13 +107,7 @@ img{
     border-radius: 50%;
     filter: blur(1px);
 }
-li{
-    text-decoration:none;
-}
-h4{
-    font-size:2vw;
-    filter: blur(1px);
-}
+
 a{
     filter: blur(1px);
     font-size:3vw;
@@ -112,71 +116,21 @@ a{
     text-decoration:none;
     color: azure;
 }
-ol {
-    list-style-type:none;
-    padding:0;
-    margin:0;
-    font-size:2vw;
-    height:2vw;
-    line-height:2vw;
-    text-align:center;
-    background-color:#74551cb4;
-  }
-  ol > li {
-    float:left;
-    background-color:#74551cb4;
-    width:20vw;
-    height: 7vw;
-
-  }
-  
-ol a {
-    display:block;
-    color:#000;
-    text-decoration:none;
-    padding:0 5px;
-  }
-
-  
-  ol > li:hover {
-    background-color:#74551cb4;
-  }
-  ol > li > ul {
-    list-style-type:none;
-    padding:0;
-    margin:0;
-  }
-  ol > li:first-child {
-    margin-left:0;
-  }
-  
-ol {
-    background-color:#74551cb4;
-  }
-  
-  ol > li > ul > li {
-    background-color:#74551cb4;
-  }
-  ol > li > ul > li:hover {
-    background-color:#74551cb4;
-  }
-  
-  ol > li > ul > li:hover a {
-    color:azure;
-  }
-  ol > li > ul {
-    display:none;
-  }
-  
-  ol > li:hover > ul {
-    
-    display:block;
-  }
-  ol > li:hover{
-    color: azure;
-  }
-
-
+a::before{
+  content: "";
+  position: absolute;
+  display: block;
+  width: 90%;
+  height: 2px;
+  top: 3.5vw;
+  left: 5%;
+  background-color: #ffffff;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+a:hover::before{
+  transform: scaleX(1);
+}
 
   *, *::before, *::after {
     padding: 0;
@@ -247,10 +201,6 @@ ol {
 #sit4:hover{
     transform: scale(1.1);
 }
-h1{
-    filter: blur(1px);
-    font-size: 3vw;
-}
 footer{
   text-align: center;
   display: flex;
@@ -259,7 +209,7 @@ footer{
 @media screen and (max-width:576px){
 main{
   grid-template-columns: 1fr 2.2fr 1fr;
-  grid-template-rows: 0.8fr 1fr 1fr; 
+  grid-template-rows: 0.6fr 1fr 1fr; 
   grid-template-areas: 
     "sec sec sec"
     "asid1 null asid2"
@@ -275,12 +225,13 @@ main{
   grid-template-rows: 0.6fr 6fr 0.6fr;
 }
 h1{
+  margin-top: 2vw;
   font-size: 7vw;
   filter: blur(0px);
 }
 h4{
   filter: blur(0px);
-  font-size: 3vw;
+  font-size: 4vw;
 }
 img{
   filter: blur(0px);
@@ -288,9 +239,6 @@ img{
 article{
   height: 35vw;
   width: 35vw;
-}
-aside{
-  /* height: 50vw; */
 }
 .word {
   position: absolute;
@@ -317,7 +265,9 @@ a{
   font-size: 6vw;
 
 }
-h3{
-  font-size: 4vw;
+#logo{
+  margin-top: 2vw;
+  height: 16vw;
+  width: 28vw;
 }
 }

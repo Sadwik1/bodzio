@@ -1,12 +1,12 @@
 document.getElementById("sit1").onclick = function () {
-    location.href = "site1";
+    location.href = "sit1.html";
 };
 document.getElementById("sit2").onclick = function () {
-    location.href = "site2";
+    location.href = "sit2.html";
 };
 document.getElementById("sit3").onclick = function () {
-    location.href = "site3";
+    location.href = "sit3.html";
 };
 document.getElementById("sit4").onclick = function () {
-    location.href = "site4";
+    location.href = "sit4.html";
 };
