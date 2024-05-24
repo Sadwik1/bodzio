@@ -4,7 +4,7 @@
 .container{
   text-align: center;
   display: grid; 
-  background-color: #a86e1d;
+  background-color: #ac9186;
   grid-template-columns: 0.6fr 1.5fr 0.6fr; 
   grid-template-rows: 0.4fr 5fr 0.6fr; 
   grid-template-areas: 
@@ -28,9 +28,9 @@ footer{
 #contact {
 width: 40vw;
 margin:2em auto;
-background-color: #b47e33;
+background-color: #ab8653;
 position: relative;
-box-shadow: 8px 8px 24px 0px rgb(92, 92, 92);
+box-shadow: 8px 8px 24px 0px rgb(64, 64, 64);
 }
 #contact::after {
 content: "";
@@ -49,7 +49,7 @@ z-index: -1;
   padding: 1em;
 }
 #contact h1 {
-background: #45310ccb;
+background: #7b602dcb;
 font-family: Oswald ,sans-serif;
 font-size: 1.75em;
 padding: 0.6em 0 0.6em 0.4em;
@@ -58,7 +58,7 @@ text-shadow: 0 0.06em 0 #424242;
 position: relative;
 }
 .contactbutton {
-background: #45310ccb;
+background: #5d513acb;
 -webkit-box-shadow: 1px 1px 0 0 #3a2807,2px 2px 0 0 #3a2807,3px 3px 0 0 #3a2807;
 box-shadow: 1px 1px 0 0 #3a2807,2px 2px 0 0 #3a2807,3px 3px 0 0 #3a2807;
 text-align: center;
